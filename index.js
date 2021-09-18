@@ -1,3 +1,4 @@
+
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
@@ -93,6 +94,7 @@ let ansTxt = document.querySelector('.ans')
 
 
 function draw(){
+
   let qa=gen()
 
   ansTxt.classList.remove('correct','incorrect')
@@ -101,7 +103,7 @@ function draw(){
 
   let btns = document.getElementById('btns')
   removeAllChildNodes(btns)
-  for(let i = 1;i<=12;i++){
+  for(let i = 1;i<=btsz;i++){
     let button = document.createElement('button')
     button.innerHTML=i
     button.setAttribute('class','b')
@@ -110,13 +112,6 @@ function draw(){
       })
     btns.appendChild(button)
   }
-
-  let gs = document.getElementById('gs')
-  let txt = document.getElementById('txt')
-  gs.addEventListener('click',function () {
-    act(txt.value==qa.ans)
-  })
-
 }
 
 function act(bool){
@@ -132,5 +127,29 @@ function act(bool){
 
   setTimeout(draw,1000)
 }
+let btsz = 36;
+let ana = document.getElementById('ana')
+let ara = document.getElementById('ara')
+ana.addEventListener('click',function(){
+  a.on=true;
+  a.low=1;
+  a.high=12;
+  a.inv=1;
 
+  m.on=true;
+  m.low=2;
+  m.high=6;
+  m.inv=0;
+  btsz=36;
+})
+ara.addEventListener('click',function(){
+  a.on=true;
+  a.low=1;
+  a.high=6;
+  a.inv=0;
+
+  m.on=false;
+
+  btsz = 12
+})
 draw()
