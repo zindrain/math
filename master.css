@@ -1,8 +1,6 @@
 .b{
   width:16.66666%;
-  
   font-size: 20px;
-
 }
 
 .correct{
@@ -11,6 +9,9 @@
 .incorrect{
   color:red
 }
-body{
+.t{
+  font-size: 30px;
+}
+.pro{
   font-size: 30px;
 }
