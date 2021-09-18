@@ -1,0 +1,16 @@
+.b{
+  width:25%;
+  height: 10;
+  font-size: 35px;
+
+}
+
+.correct{
+  color: green
+}
+.incorrect{
+  color:red
+}
+body{
+  font-size: 30px;
+}
