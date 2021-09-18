@@ -141,6 +141,7 @@ ana.addEventListener('click',function(){
   m.high=6;
   m.inv=0;
   btsz=36;
+  draw();
 })
 ara.addEventListener('click',function(){
   a.on=true;
@@ -151,5 +152,6 @@ ara.addEventListener('click',function(){
   m.on=false;
 
   btsz = 12
+  draw();
 })
 draw()
